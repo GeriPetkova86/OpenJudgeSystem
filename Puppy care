@@ -1,0 +1,32 @@
+4.Puppy care
+========================================================================================================================
+using System;
+ 
+namespace Fourth
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int food = int.Parse(Console.ReadLine()) * 1000;
+            string command = Console.ReadLine();
+            int result = 0;
+            while (command != "Adopted")
+            {
+                int intCom = int.Parse(command);
+                result += intCom;
+ 
+                command = Console.ReadLine();
+            }
+            if (result <= food)
+            {
+                Console.WriteLine($"Food is enough! Leftovers: {food - result} grams.");
+            }
+            else
+            {
+                Console.WriteLine($"Food is not enough. You need {result - food} grams more.");
+            }
+        }
+    }
+}
+ 
